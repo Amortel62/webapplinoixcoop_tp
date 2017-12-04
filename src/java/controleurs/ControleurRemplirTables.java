@@ -71,6 +71,10 @@ public class ControleurRemplirTables {
         cmd4.setQuantite(5);
         cmd4.setLeProduit(p2);
         
+        
+         dist.getLesCommandes().add(cmd1);
+         dist2.getLesCommandes().add(cmd4);
+        
                        // A completer
         
         utx.begin();

@@ -27,6 +27,8 @@ public class SWR_NoixCoop  {
     @Path("mescommandesenattente/{id}")
     @Produces({"application/xml","application/json"})
     public List<Commande> getDistributeur(@PathParam("id")String id) {
+       
+
         
        Distributeur d= dao.getLeDistributeur(id);
       
