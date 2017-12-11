@@ -122,6 +122,20 @@ public class Commande implements Serializable {
 //        }
     return dateEnvoi == null;
     }
+     public String XmlCommande(){
+    
+        String xml = "";
+    
+        xml = "<commande id =\""+id+"\">";
+        xml = xml + "<produit variete = \""+leProduit.getVariete()+"\" type = \""+leProduit.getType()+"\" calibre = \""+leProduit.getCalibre()+"\"/>";
+        xml = xml + "<conditionnement type = \""+conditionnement+"\"/>";
+        xml = xml + "<quantite>"+conditionnement+"</quantite>";
+        xml = xml + "<date_conditionnement>"+dateConditionnement+"</date_conditionnement>";
+        xml = xml + "<date_envoi>"+dateEnvoi+"</date_envoi>";
+        xml = xml + "</commande>";
+        
+        return xml;
+    }
     
 
 }
